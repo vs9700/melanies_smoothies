@@ -21,7 +21,7 @@ my_data_frame =session.table('smoothies.public.fruit_options').select(col('FRUIT
 # converting snowpark data frame to pandas
 pd_df = my_data_frame.to_pandas()
 st.dataframe(pd_df)
-st.stop()
+#st.stop()
 ingrediant_list=st.multiselect('choose up to 5 ingrediants',my_data_frame,max_selections=5)
 if ingrediant_list:
     #st.write(ingrediant_list)
